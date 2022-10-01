@@ -19,23 +19,23 @@ FAIL src/nested.test.ts
           "id": 5,
           "name": "Colors",
           "options": Array [
-    -       "newspaper",
-    +       "red",
+    -       "red",
+    +       "newspaper",
             "apple",
-            "firetruck",
+            "newspaper",
           ],
           "points": 1,
           "published": true,
 
-      1001 |             }
-      1002 |         ]);
-    > 1003 |         expect(editOption(SIMPLE_QUESTIONS, 5, 0, "newspaper")).toEqual([
+      1044 |         ]);
+      1045 |
+    > 1046 |         expect(editOption(SIMPLE_QUESTIONS, 5, 2, "newspaper")).toEqual([
            |                                                                 ^
-      1004 |             {
-      1005 |                 id: 1,
-      1006 |                 name: "Addition",
+      1047 |             {
+      1048 |                 id: 1,
+      1049 |                 name: "Addition",
 
-      at Object.<anonymous> (src/nested.test.ts:1003:65)
+      at Object.<anonymous> (src/nested.test.ts:1046:65)
 
 PASS src/arrays.test.ts
 PASS src/objects.test.ts
@@ -46,8 +46,8 @@ PASS src/App.test.tsx
 ----------------|---------|----------|---------|---------|-------------------
 File            | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------|---------|----------|---------|---------|-------------------
-All files       |   98.97 |      100 |   98.63 |     100 |                   
- src            |   98.97 |      100 |   98.63 |     100 |                   
+All files       |   99.02 |      100 |   98.63 |     100 |                   
+ src            |   99.02 |      100 |   98.63 |     100 |                   
   App.tsx       |     100 |      100 |     100 |     100 |                   
   arrays.ts     |   97.22 |      100 |   95.83 |     100 |                   
   functions.ts  |     100 |      100 |     100 |     100 |                   
@@ -61,5 +61,5 @@ All files       |   98.97 |      100 |   98.63 |     100 |
 Test Suites: 1 failed, 6 passed, 7 total
 Tests:       1 failed, 48 passed, 49 total
 Snapshots:   0 total
-Time:        4.672 s
+Time:        4.826 s
 Ran all test suites.
