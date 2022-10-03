@@ -8,13 +8,12 @@ import { StartAttempt } from "./components/StartAttempt";
 import { TwoDice } from "./components/TwoDice";
 import { CycleHoliday } from "./components/CycleHoliday";
 import { Counter } from "./components/Counter";
->>>>>>> upstream/task-state
-            <Container>
-                <Row>
-                    <Col>
-                        <img src={yoda} alt="yoda" width="250" height="150" />
-                        <div
-                            style={{
+function App(): JSX.Element {
+    return (
+        <div className="App">
+            <header className="App-header">
+                UD CISC275 with React Hooks and TypeScript
+            </header>
             <hr></hr>
             <Counter></Counter>
             <hr />
@@ -27,7 +26,6 @@ import { Counter } from "./components/Counter";
             <ChangeType></ChangeType>
             <hr />
             <CycleHoliday></CycleHoliday>
->>>>>>> upstream/task-state
         </div>
     );
 }
