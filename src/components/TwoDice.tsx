@@ -26,10 +26,14 @@ export function TwoDice(): JSX.Element {
     return (
         <>
             <div>
-                <Button onClick={rollDice1}>Roll Left</Button>
-                <span data-testid="left-die"> {dice1}</span>
-                <Button onClick={rollDice2}>Roll Right</Button>
-                <span data-testid="right-die"> {dice2}</span>
+                <span data-testid="left-die">
+                    {" "}
+                    <Button onClick={rollDice1}>Roll Left {dice1}</Button>
+                </span>
+
+                <span data-testid="right-die">
+                    <Button onClick={rollDice2}>Roll Right {dice2}</Button>
+                </span>
             </div>
             {dice1 === dice2 && dice1 !== 1 && <div>You Win</div>}
             {dice1 === dice2 && dice1 === 1 && <div>You Lose</div>}
