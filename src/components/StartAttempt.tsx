@@ -40,4 +40,3 @@ export function StartAttempt(): JSX.Element {
         </span>
     );
 }
-// does this work
