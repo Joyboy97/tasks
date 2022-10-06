@@ -6,7 +6,7 @@ export function StartAttempt(): JSX.Element {
     const [active, setActive] = useState<boolean>(false);
     function deactivateQuiz(): void {
         setActive(!active);
-        if (active) setAttempt(attempt - 1);
+        if (!active) setAttempt(attempt - 1);
     }
     return (
         <span>
@@ -18,13 +18,13 @@ export function StartAttempt(): JSX.Element {
                     Mulligan
                 </Button>
             }
-            {!active && <div>{attempt} attempts left</div>}
+            <div>{attempt} attempts left</div>
             {active && <div>Quiz active</div>}
             {attempt === 0 && <div>No More Attempts!</div>}
             {
                 <Button
                     onClick={deactivateQuiz}
-                    disabled={active || attempt < 1}
+                    disabled={active || attempt <= 0}
                 >
                     Start Quiz
                 </Button>
