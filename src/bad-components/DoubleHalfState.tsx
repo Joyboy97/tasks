@@ -1,3 +1,6 @@
 import { useState } from "react";
-
-export const [dhValue, setDhValue] = useState<number>(10);
+interface dhstates {
+    // The type is "a function that consumes a boolean and returns nothing"
+    setDhValue: (newdhValue: number) => void;
+    dhValue: number;
+}
