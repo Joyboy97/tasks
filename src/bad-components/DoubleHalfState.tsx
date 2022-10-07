@@ -1,6 +1,5 @@
-import { useState } from "react";
-interface dhstates {
-    // The type is "a function that consumes a boolean and returns nothing"
-    setDhValue: (newdhValue: number) => void;
+//import { useState } from "react";
+export interface dhStates {
+    setDhValue: (newValue: number) => void;
     dhValue: number;
 }
